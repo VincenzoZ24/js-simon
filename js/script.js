@@ -4,7 +4,8 @@ Dopo che sono stati inseriti i 5 numeri, il software dice quanti e quali dei num
 
 
 let numeri_generati = document.querySelector(".numeri_generati");
-
+let btn = document.querySelector("button")
+btn.classList.add("d_none")
 
 function numberRandom(min, max) {
     return Math.floor(Math.random() * 100) + 1;
@@ -22,16 +23,23 @@ const idInterval = setInterval(conto, 3000);
 function conto() {
     numeri_generati.classList.add("d_none")
 }
-function stop(){
+function stop() {
     clearInterval(idInterval)
-    
+
 }
-let promptNumber = setTimeout(inserisciNumeri, 3000)
+let Number = setTimeout(inserisciNumeri, 3000)
 let inputNUmber = document.querySelector(".input");
-function inserisciNumeri() {   
-    inputNUmber.classList.remove("d_none")   
+function inserisciNumeri() {
+    inputNUmber.classList.remove("d_none");
+    btn.classList.remove("d_none");
+    btn.addEventListener("click", function(){
+        inputNUmber.value = ""
+        if (arrNumber.includes(parseInt(inputNUmber.value))) {
+            console.log("HAI VINTO")
+        } else {
+        console.log("HAI PERSO")
+        }
+    })
 };
 
-if(inputNUmber.value === arrNumber){
-    alert("hai vinto")
-}
+
