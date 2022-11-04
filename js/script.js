@@ -11,9 +11,27 @@ function numberRandom(min, max) {
 
 }
 const arrNumber = []
-for(i = 1; i<= 5; i++){
-    numberRandom(1,100);
-    arrNumber.push(numberRandom(1,100))
-    console.log(numberRandom(1,100))
+for (i = 1; i <= 5; i++) {
+    numberRandom(1, 100);
+    arrNumber.push(numberRandom(1, 100))
+    console.log(numberRandom(1, 100))
     numeri_generati.innerHTML = arrNumber;
+}
+
+const idInterval = setInterval(conto, 3000);
+function conto() {
+    numeri_generati.classList.add("d_none")
+}
+function stop(){
+    clearInterval(idInterval)
+    
+}
+let promptNumber = setTimeout(inserisciNumeri, 3000)
+let inputNUmber = document.querySelector(".input");
+function inserisciNumeri() {   
+    inputNUmber.classList.remove("d_none")   
+};
+
+if(inputNUmber.value === arrNumber){
+    alert("hai vinto")
 }
