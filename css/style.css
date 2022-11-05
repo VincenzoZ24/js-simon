@@ -7,3 +7,36 @@
 .d_none{
     display: none;
 }
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgb(57, 55, 55);
+    font-size: 40px;
+}
+.numeri_generati{
+    padding: 1rem;
+    background-color: gray;
+    border-radius: 1rem;
+}
+.input{
+    margin-top: 4rem;
+    margin-bottom: 1rem;
+    border: none;
+    padding: 1rem;
+    border-radius: 1rem;
+    background-color: gray;
+    font-size: 40px;
+}
+button{
+    padding: 1rem;
+    border: none;
+    border-radius: 1rem;
+    background-color: lightgray;
+}
+.esito{
+    font-size: 80px;
+    color: rgb(70, 254, 254);
+}

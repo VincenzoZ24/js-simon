@@ -15,30 +15,36 @@ const arrNumber = []
 for (i = 1; i <= 5; i++) {
     numberRandom(1, 100);
     arrNumber.push(numberRandom(1, 100))
-    console.log(numberRandom(1, 100))
+    
     numeri_generati.innerHTML = arrNumber;
 }
 
-const idInterval = setInterval(conto, 3000);
+const idInterval = setInterval(conto, 5000);
 function conto() {
     numeri_generati.classList.add("d_none")
 }
 function stop() {
     clearInterval(idInterval)
-
+    
 }
-let Number = setTimeout(inserisciNumeri, 3000)
-let inputNUmber = document.querySelector(".input");
+let Number = setTimeout(inserisciNumeri, 5000)
+let inputNumber = document.querySelector(".input");
+let esito =document.querySelector(".esito")
+
 function inserisciNumeri() {
-    inputNUmber.classList.remove("d_none");
+    esito.classList.remove("d_none")
+    inputNumber.classList.remove("d_none");
     btn.classList.remove("d_none");
+    
     btn.addEventListener("click", function(){
-        inputNUmber.value = ""
-        if (arrNumber.includes(parseInt(inputNUmber.value))) {
-            console.log("HAI VINTO")
+        
+        console.log(inputNumber.value)
+        if (arrNumber.includes(parseInt(inputNumber.value))) {
+            esito.innerHTML = "HAI VINTO"
         } else {
-        console.log("HAI PERSO")
+            esito.innerHTML = "HAI PERSO"
         }
+        inputNumber.value= ""
     })
 };
 
