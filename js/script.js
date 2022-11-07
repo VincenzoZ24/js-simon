@@ -39,7 +39,7 @@ function inserisciNumeri() {
     btn.addEventListener("click", function(){
         
         console.log(inputNumber.value)
-        if (arrNumber.includes(parseInt(inputNumber.value))) {
+        if (arrNumber == inputNumber.value) {
             esito.innerHTML = "HAI VINTO"
         } else {
             esito.innerHTML = "HAI PERSO"
